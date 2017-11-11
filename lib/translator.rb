@@ -1,16 +1,16 @@
 # require modules here
 
-def load_library
+def load_library(file)
   # code goes here
   require "yaml"
 
-  lib = YAML.load_file('emoticons.yml')
+  lib = YAML.load_file(file)
   lib
 end
 
 def get_japanese_emoticon(symbol)
   # code goes here
-  lib = load_library
+  lib = load_library(library)
   result = nil
   lib.each do |universal, array|
     if symbol == array[0]
