@@ -8,9 +8,9 @@ def load_library(file)
   lib
 end
 
-def get_japanese_emoticon(symbol)
+def get_japanese_emoticon(file,symbol)
   # code goes here
-  lib = load_library(library)
+  lib = load_library(file)
   result = nil
   lib.each do |universal, array|
     if symbol == array[0]
@@ -20,9 +20,9 @@ def get_japanese_emoticon(symbol)
   result
 end
 
-def get_english_meaning
+def get_english_meaning(file,symbol)
   # code goes here
-  lib = load_library
+  lib = load_library(file)
   result = nil
   lib.each do |universal, array|
     if symbol == array[1]
