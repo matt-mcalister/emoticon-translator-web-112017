@@ -27,6 +27,9 @@ def get_japanese_emoticon(file,symbol)
       result = japanese
     end
   end
+  if result == nil
+    result = "Sorry, that emoticon was not found"
+  end
   result
 end
 
@@ -39,6 +42,8 @@ def get_english_meaning(file,symbol)
       result = meaning
     end
   end
-
+  if result == nil
+    result = "Sorry, that emoticon was not found"
+  end
   result
 end
