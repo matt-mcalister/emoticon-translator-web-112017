@@ -14,6 +14,7 @@ def load_library(file)
     result[get_meaning][array[1]] = universal
     result[get_emoticon][array[0]] = array[1]
   end
+  result
 end
 
 def get_japanese_emoticon(file,symbol)
