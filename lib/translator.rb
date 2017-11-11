@@ -11,8 +11,8 @@ def load_library(file)
     "get_emoticon" => {}
   }
   lib.each do |universal, array|
-    result[get_meaning][array[1]] = universal
-    result[get_emoticon][array[0]] = array[1]
+    result["get_meaning"][array[1]] = universal
+    result["get_emoticon"][array[0]] = array[1]
   end
   result
 end
