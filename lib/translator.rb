@@ -23,7 +23,7 @@ def get_japanese_emoticon(file,symbol)
   result = nil
 
   lib["get_emoticon"].each do |english,japanese|
-    if symbol == English
+    if symbol == english
       result = japanese
     end
   end
