@@ -21,7 +21,7 @@ def get_japanese_emoticon(file,symbol)
   # code goes here
   lib = load_library(file)
   result = nil
-  
+
   lib["get_emoticon"].each do |english,japanese|
     if symbol == English
       result = japanese
@@ -34,10 +34,11 @@ def get_english_meaning(file,symbol)
   # code goes here
   lib = load_library(file)
   result = nil
-  lib.each do |universal, array|
-    if symbol == array[1]
-      result = array[0]
+  lib["get_meaning"].each do |japanese,meaning|
+    if symbol == japanese
+      result = meaning
     end
   end
+  
   result
 end
