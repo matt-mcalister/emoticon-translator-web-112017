@@ -3,9 +3,17 @@
 def load_library(file)
   # code goes here
   require "yaml"
-
+  
   lib = YAML.load_file(file)
-  lib
+
+  result = {
+    "get_meaning" => {},
+    "get_emoticon" => {}
+  }
+  lib.each do |universal, array|
+    result[get_meaning][array[1]] = universal
+    result[get_emoticon][array[0]] = array[1]
+  end
 end
 
 def get_japanese_emoticon(file,symbol)
