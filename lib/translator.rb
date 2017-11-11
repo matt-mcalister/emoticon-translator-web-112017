@@ -39,6 +39,6 @@ def get_english_meaning(file,symbol)
       result = meaning
     end
   end
-  
+
   result
 end
