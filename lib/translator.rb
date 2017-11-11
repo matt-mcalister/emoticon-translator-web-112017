@@ -3,7 +3,7 @@
 def load_library(file)
   # code goes here
   require "yaml"
-  
+
   lib = YAML.load_file(file)
 
   result = {
